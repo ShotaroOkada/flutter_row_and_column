@@ -45,38 +45,23 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Column(
         children: <Widget>[
-          Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Text(
-                  'You have pushed the button this many times:',
-                ),
-                Text(
-                  '$_counter',
-                  style: Theme.of(context).textTheme.display1,
-                ),
-              ],
+          Flexible(
+            child: Container(
+              color: Colors.cyan,
             ),
+            flex: 3,
           ),
-          IntrinsicWidth(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: <Widget>[
-                RaisedButton(
-                  onPressed: () {},
-                  child: Text('Short'),
-                ),
-                RaisedButton(
-                  onPressed: () {},
-                  child: Text('A bit Longer'),
-                ),
-                RaisedButton(
-                  onPressed: () {},
-                  child: Text('The Longest text button'),
-                ),
-              ],
+          Flexible(
+            child: Container(
+              color: Colors.red,
             ),
+            flex: 2,
+          ),
+          Flexible(
+            child: Container(
+              color: Colors.yellow,
+            ),
+            flex: 1,
           ),
         ],
       ),
