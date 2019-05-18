@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
-void main() { 
-  debugPaintSizeEnabled=true;
+void main() {
+  debugPaintSizeEnabled = true;
   runApp(MyApp());
-  }
+}
 
 class MyApp extends StatelessWidget {
   @override
@@ -59,17 +59,22 @@ class _MyHomePageState extends State<MyHomePage> {
               ],
             ),
           ),
-          Container(
-            color: Colors.orange,
-            child: Row /*or Column*/ (
-              mainAxisAlignment: MainAxisAlignment.end,
-              // mainAxisSize: MainAxisSize.min,
-              // mainAxisAlignment: MainAxisAlignment.center,
-              // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          IntrinsicWidth(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
-                Icon(Icons.star, size: 50),
-                Icon(Icons.star, size: 50),
-                Icon(Icons.star, size: 50),
+                RaisedButton(
+                  onPressed: () {},
+                  child: Text('Short'),
+                ),
+                RaisedButton(
+                  onPressed: () {},
+                  child: Text('A bit Longer'),
+                ),
+                RaisedButton(
+                  onPressed: () {},
+                  child: Text('The Longest text button'),
+                ),
               ],
             ),
           ),
