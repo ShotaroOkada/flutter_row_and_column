@@ -43,7 +43,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Column(
+      body: Row(
         children: <Widget>[
           Flexible(
             child: Container(
@@ -58,8 +58,12 @@ class _MyHomePageState extends State<MyHomePage> {
             flex: 2,
           ),
           Flexible(
-            child: Container(
-              color: Colors.yellow,
+            child: ConstrainedBox(
+              constraints: BoxConstraints.expand(),
+              child: const Card(
+                child: const Text('Hello World!'),
+                color: Colors.yellow,
+              ),
             ),
             flex: 1,
           ),
